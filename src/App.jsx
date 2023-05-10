@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import me from "./assets/apngb-animated.png";
 import sleep from "./assets/sleep.png";
 import ouch from "./assets/ouch.png";
 import Speech from "./Components/Speech/Speech";
+import Completed from "./Components/Projects/Completed";
 import "./App.css";
-import Frame from "./Components/Frame/Frame";
-import tabletopImg from "./assets/tabletop-screenshot-min.png";
-import bulletjournalImg from "./assets/bulletjournal.png";
-import gingerbread from "./assets/gingerbread.jpg"
+
+import Navbar from "./Components/Navbar/Navbar";
+import Welcome from "./Components/Welcome/Welcome";
+import InProgress from "./Components/Projects/InProgress";
 
 function App() {
   const [message, setMessage] = useState("Hello");
@@ -39,28 +41,28 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    const noMouseMove = () => {
-      setMouseMoving(false);
-    };
-    const handleMouseMove = () => {
-      setMouseMoving(true);
-      setTimeout(() => {
-        setMouseMoving(false);
-        return;
-      }, 5000);
-    };
-    window.addEventListener("mousemove", handleMouseMove);
+  // useEffect(() => {
+  //   const noMouseMove = () => {
+  //     setMouseMoving(false);
+  //   };
+  //   const handleMouseMove = () => {
+  //     setMouseMoving(true);
+  //     setTimeout(() => {
+  //       setMouseMoving(false);
+  //       // return;
+  //     }, 5000);
+  //   };
+  //   document.addEventListener("mousemove", handleMouseMove);
     // window.addEventListener("mousedown", handleMouseMove);
     // window.addEventListener("touchmove", handleMouseMove);
     // window.addEventListener("scroll", handleMouseMove);
-    return () => {
-      window.removeEventListener("mousemove", noMouseMove);
-      // window.removeEventListener("mousedown", noMouseMove);
-      // window.removeEventListener("touchmove", noMouseMove);
-      // window.removeEventListener("scroll", noMouseMove);
-    };
-  }, [setMouseMoving]);
+    // return () => {
+    //   document.removeEventListener("mousemove", noMouseMove);
+    //   // window.removeEventListener("mousedown", noMouseMove);
+    //   // window.removeEventListener("touchmove", noMouseMove);
+    //   // window.removeEventListener("scroll", noMouseMove);
+    // };
+  // }, [setMouseMoving]);
 
   // useEffect(() => {
   //   setTimeout(() => {
@@ -69,41 +71,37 @@ function App() {
   // }, [mouseMoving, setMouseMoving]);
 
   return (
-    // <div
+    // <
     //   onTouchMove={() => setMouseMoving(true)}
     //   onScroll={() => setMouseMoving(true)}
     //   onMouseDown={() => setMouseMoving(true)}
     //   onMouseMove={() => setMouseMoving(true)}
     // >
     <div>
-      <div className="artwork">
-        <div>
-          <Frame image={tabletopImg} />
-        </div>
-        <div>
-          <Frame image={bulletjournalImg} />
-        </div>
-        <div>
-          <Frame image={gingerbread} />
-        </div>
-      </div>
-      <div>
-        {mouseMoving ? (
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/completed" element={<Completed />} />
+          <Route path="/inprogress" element={<InProgress/>}/>
+          <Route path="*" element={<Welcome/>}/>
+        </Routes>
+
+        {/* {mouseMoving ? (
           <div id="memoji">
             {message === "Ouch!" ? (
-              <img onClick={getClickCoords} src={ouch} />
+              <img onClick={getClickCoords} src={ouch} alt="sad memoji" />
             ) : (
-              <img onClick={getClickCoords} src={me} />
+              <img onClick={getClickCoords} src={me} alt="memoji" />
             )}
             <Speech message={message} />
           </div>
         ) : (
           <div id="memoji">
-            <img onClick={getClickCoords} src={sleep} />
-            {/* <Speech message={message} /> */}
+            <img onClick={getClickCoords} src={sleep} alt="sleeping memoji" />
+            
           </div>
-        )}
-      </div>
+        )} */}
+      </BrowserRouter>
     </div>
   );
 }
