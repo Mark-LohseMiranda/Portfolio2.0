@@ -57,7 +57,7 @@
 } */
 
 .animate div {
-  opacity: 0
+  opacity: 0;
 }
 
 .animate div:nth-child(1) {
@@ -73,9 +73,21 @@
   animation: change 2s ease-in-out forwards;
   animation-delay: 2.5s;
 }
+.animate div:nth-child(4) {
+  animation: change 2s ease-in-out forwards;
+  animation-delay: 3.5s;
+}
+.animate div:nth-child(5) {
+  animation: change 2s ease-in-out forwards;
+  animation-delay: 4.5s;
+}
+.animate div:nth-child(6) {
+  animation: change 2s ease-in-out forwards;
+  animation-delay: 5Ï.5s;
+}
 
 @keyframes change {
-  to{
-    opacity: 1
+  to {
+    opacity: 1;
   }
 }
