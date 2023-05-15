@@ -7,6 +7,9 @@ import logo from "../../assets/apngb-animated.png";
 import linkedin from "../../assets/LI-In-Bug.png";
 import github from "../../assets/github-mark-white.png";
 import whatsapp from "../../assets/3D_Square_with_WhatsApp_Logo.png";
+import flags from "../../assets/flags.png";
+
+import Speech from "../Speech/Speech";
 
 export default function Navbar() {
   const scrollPosition = useScrollPosition();
@@ -14,6 +17,7 @@ export default function Navbar() {
     { name: "Welcome", href: "/" },
     { name: "In Progress Projects", href: "/inprogress" },
     { name: "Completed Projects", href: "/completed" },
+    { name: "Pictures", href: "/pictures" },
   ];
 
   const classNames = (...classes) => {
@@ -124,12 +128,23 @@ export default function Navbar() {
               </div>
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <div>
+                  <img
+                    className="hidden w-12 h-12 lg:block"
+                    src={flags}
+                    alt="flags"
+                  />
+                </div>
+                <div>
                   <a
                     href="https://wa.link/ypq77n"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <img className="w-6 h-6 m-1" src={whatsapp} alt="whatsapp" />
+                    <img
+                      className="w-6 h-6 m-1"
+                      src={whatsapp}
+                      alt="whatsapp"
+                    />
                   </a>
                 </div>
                 <div>
@@ -153,8 +168,8 @@ export default function Navbar() {
               </div>
             </div>
           </div>
-          <Disclosure.Panel className="origin-top animate-open-menu sm:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+          <Disclosure.Panel className="sm:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 origin-top animate-open-menu">
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
@@ -171,6 +186,13 @@ export default function Navbar() {
                   {item.name}
                 </Disclosure.Button>
               ))}
+            </div>
+            <div className="grid ">
+              <img
+                className="w-12 h-12 place-self-center"
+                src={flags}
+                alt="flags"
+              />
             </div>
           </Disclosure.Panel>
         </>

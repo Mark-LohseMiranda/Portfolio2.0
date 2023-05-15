@@ -11,6 +11,9 @@ export default function InProgress() {
         </div>
         <div className="text-justify place-self-center">
           <p className="text-center">
+            <span className="text-white">
+              Flashcards
+            </span>
             <a
               href="https://github.com/Mark-LohseMiranda/flashcards"
               target="_blank"
@@ -34,6 +37,9 @@ export default function InProgress() {
         </div>
         <div className="text-justify place-self-center">
           <p className="text-center">
+            <span className="text-white">
+              Wedding Organizer
+            </span>
             <a
               href="https://github.com/Mark-LohseMiranda/wedding-mongodb-express-react-node"
               target="_blank"
@@ -45,23 +51,27 @@ export default function InProgress() {
           Concept: I wanted to make a wedding organizer app. Users can create a
           wedding, add parties, guests, and gifts. I am working with two amazing
           developers:{" "}
-          <a
-            className="text-blue-300 "
-            href="https://www.linkedin.com/in/courtney-cash-616a8617b/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <u>Courtney</u>
-          </a>{" "}
+          <u>
+            <a
+              className="text-blue-300 "
+              href="https://www.linkedin.com/in/courtney-cash-616a8617b/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Courtney
+            </a>
+          </u>{" "}
           and{" "}
-          <a
-            className="text-blue-300"
-            href="https://www.linkedin.com/in/nick-gray-06/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <u>Nick</u>
-          </a>
+          <u>
+            <a
+              className="text-blue-300"
+              href="https://www.linkedin.com/in/nick-gray-06/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Nick
+            </a>
+          </u>
           .
           <br />
           <br />
