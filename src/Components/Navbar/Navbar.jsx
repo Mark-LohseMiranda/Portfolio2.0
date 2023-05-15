@@ -4,6 +4,9 @@ import { useScrollPosition } from "../Util/useScrollPosition";
 // import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import logo from "../../assets/apngb-animated.png";
+import linkedin from "../../assets/LI-In-Bug.png";
+import github from "../../assets/github-mark-white.png";
+import whatsapp from "../../assets/3D_Square_with_WhatsApp_Logo.png";
 
 export default function Navbar() {
   const scrollPosition = useScrollPosition();
@@ -18,9 +21,9 @@ export default function Navbar() {
   };
 
   const getURL = (item) => {
-    console.log()
-    return (window.location.pathname.split("3").pop()===item)
-  }
+    console.log();
+    return window.location.pathname.split("3").pop() === item;
+  };
 
   const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-black transition ease transform duration-300 bg-white`;
 
@@ -117,6 +120,35 @@ export default function Navbar() {
                       </a>
                     ))}
                   </div>
+                </div>
+              </div>
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <div>
+                  <a
+                    href="https://wa.link/ypq77n"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img className="w-6 h-6 m-1" src={whatsapp} alt="whatsapp" />
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="https://www.linkedin.com/in/mark-lohse-miranda/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img className="h-6 w-7" src={linkedin} alt="linkedin" />
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="https://github.com/mark-lohsemiranda"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img className="w-6 h-6" src={github} alt="github" />
+                  </a>
                 </div>
               </div>
             </div>
