@@ -1,4 +1,5 @@
 import "./Welcome.css";
+import whatsapp from "../../assets/3D_Square_with_WhatsApp_Logo.png";
 
 export default function Welcome() {
   return (
@@ -18,26 +19,64 @@ export default function Welcome() {
         </div>
         <div className="text-gray-300">
           {/* <br/> */}
-          <p>Thank you for visting. I am Mark Lohse-Miranda and I am a</p>
-          <br />
-          <p className="text-5xl text-white"><u>Full Stack Web Developer</u></p>
+          <p className="text-5xl text-white">
+            <u>Full Stack Web Developer</u>
+          </p>
           <br />
           <div className="flex flex-wrap justify-center">
-            <p className="max-w-xl text-justify">
-              This means that I can handle whatever your website needs are. From
-              a simple one page landing site to a complex interactive, visually
-              apealing site with a shopping cart, user accounts or more.
+            <p className="max-w-3xl text-justify">
+              Hi there! I'm Mark - a true lover of the outdoors, a computer
+              enthusiast, and your go-to guy for all things web development. I'm
+              a former Marine and Coastie with a robust law enforcement
+              background spanning 16 years. I've transitioned from serving my
+              country to serving you, utilizing my knack for problem-solving to
+              navigate the complex world of coding.
             </p>
-            <p className="max-w-xl mt-3 text-justify">
-              I love projects large and small. Just need something updated? I
-              can do that. Need something built from the ground up? I can do
-              that!
+            <p className="max-w-3xl mt-3 text-justify">
+              My journey in technology was forged from a unique alloy of life
+              experiences. Armed with a bachelor's degree in psychology and a
+              full-stack web development certificate from the prestigious
+              University of Washington, I have harnessed the power of
+              understanding people and computers. This blend of skills enables
+              me to build websites that are functional and empathetic to your
+              users' needs.
             </p>
-            <p className="max-w-xl mt-3 text-justify">
-              Currently I am looking for work. If you're an employeer I'd love
-              to chat to see if we're a good fit for each other. If you're a
-              non-profit looking for volunteers I'd love to assist.
+            <p className="max-w-3xl mt-3 text-justify">
+              The lessons I learned from my previous roles have equipped me with
+              the ability to handle any challenge thrown my way. I'm passionate
+              about thinking outside the box and tackling the most complex
+              issues head-on. My motto is:{" "}
+              <strong><em>no problem is too big or too small.</em></strong>
             </p>
+            <p className="max-w-3xl mt-3 text-justify">
+              Family is the core of my universe, and I'm fortunate to share my
+              life with my spouse and two children here in Washington State. As
+              an outgoing individual, I thrive on the connections I form with
+              people. This enthusiasm extends to my work - I'm dedicated to
+              building solid relationships with my clients and understanding
+              their unique needs.
+            </p>
+            <p className="max-w-3xl mt-3 text-justify">
+              I firmly believe in using my skills to give back to the community.
+              I'm an active donor of technical services to charities, working to
+              improve the world, one line of code at a time.
+            </p>
+            <p className="max-w-3xl mt-3 text-justify">
+              Whether you're a charity needing tech assistance or a business
+              looking to improve your online presence, I'm here to help. I can
+              support you with your website needs, regardless of the size or
+              complexity of your project. I aim to bring your vision to life,
+              one webpage at a time.
+            </p>
+            <p className="max-w-3xl mt-3 text-justify">
+              Are you ready to embark on your web development journey with me?{" "}
+              <strong>Let's chat!</strong>
+            </p>
+          </div>
+          <div className="flex justify-center mt-3">
+            <a href="https://wa.link/ypq77n" target="_blank" rel="noreferrer">
+              <img className="w-6 h-6 m-1" src={whatsapp} alt="whatsapp" />
+            </a>
           </div>
         </div>
       </div>
